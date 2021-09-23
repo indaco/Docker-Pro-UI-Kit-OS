@@ -1,0 +1,75 @@
+<header>
+  <div class="w-full px-4 mx-auto bg-white max-w-7xl sm:px-6 lg:px-24 md:px-12">
+    <div
+      x-data="{ open: false }"
+      class="flex flex-col w-full mx-auto  md:items-center md:justify-between md:flex-row"
+    >
+      <div class="flex flex-row items-center justify-between py-4">
+        <a
+          href="./index.html"
+          class="text-lg font-semibold focus:outline-none focus:shadow-outline"
+        >
+          {{> "assets/logo" }}
+        </a>
+        <button
+          class="md:hidden focus:outline-none"
+          @click="open = !open"
+          aria-label="hidden"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg type="button" fill="black" viewBox="0 0 20 20" class="w-10 h-10">
+            <path
+              x-show="!open"
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+            <path
+              x-show="open"
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+              style="display: none"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav
+        role="navigation"
+        :class="{'flex': open, 'hidden': !open}"
+        class="flex-col items-center flex-grow hidden py-3  md:pb-0 md:flex md:justify-end md:flex-row"
+      >
+        <span class="sr-only">Main menu</span>
+        <a
+          title="All tailwind templates"
+          class="px-6 py-3 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg  md:mt-0 md:ml-auto hover:text-brand-6 focus:text-brand-6 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+          href="#"
+          >Pricing</a
+        >
+
+        <a
+          title="Wicked templates documentation"
+          class="px-6 py-3 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-brand-6 focus:text-brand-6 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+          href="#"
+          >Features
+        </a>
+
+        <a
+          title="frequent questions and answers"
+          class="px-6 py-3 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-brand-6 focus:text-brand-6 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 lg:mr-auto"
+          href="#"
+          >Contact
+        </a>
+
+        <a
+          href="#howto"
+          id="learn-button"
+          title="how it works"
+          class="flex items-center justify-center px-8 py-3 text-sm text-white border border-transparent rounded-md  bg-brand-6 hover:bg-brand-7 md:px-10"
+        >
+          Pricing
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
