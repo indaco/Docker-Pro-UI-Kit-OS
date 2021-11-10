@@ -259,3 +259,6 @@ gulp.task("build-prod", gulp.series("build", "mangleCSS"));
 //   Task: default
 // -------------------------------------
 gulp.task("default", gulp.series("build", "server"));
+//   Task: build
+// -------------------------------------
+gulp.task('build', gulp.series('clean', gulp.parallel('postcss', 'fonts', 'images', 'views'), 'mangleCSS'));

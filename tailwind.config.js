@@ -6,18 +6,31 @@ const plugin = require("tailwindcss/plugin");
 // Here we importa all tailwind colors
 const colors = require("tailwindcss/colors");
 module.exports = {
-  //mode: 'jit',
-
+  mode: 'jit',
   purge: ["./src/**/*.html"],
-  darkMode: "media", // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       boxShadow: {
-        static:
-          "0px 10px 0px -10px rgba(151,163,184,.5), 0px 20px 10px -20px rgba(151,163,184,.5),0px 30px 20px -25px rgba(151,163,184,.5),0px 40px 30px -30px rgba(151,163,184,.5),0px 50px 50px -35px rgba(151,163,184,.5);",
-
-        hover:
-          "0px 5px 8px -5px rgba(151,163,184,.5),0px 15px 16px -15px rgba(151,163,184,.5),0px 25px 32px -25px rgba(151,163,184,.5)",
+gitter:"rgba(136, 172, 243, 0.25) 0px 10px 30px, rgba(0, 0, 0, 0.03) 0px 1px 1px, rgba(0, 51, 167, 0.1) 0px 10px 20px;",
+      },
+      fontFamily: {
+        mono: ['"IBM Plex Mono"', "ui-monospace"], // Ensure fonts with spaces have " " surrounding it.
+        sans: [
+          '"IBM Plex Sans"',
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          '"Noto Sans"',
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ], // Ensure fonts with spaces have " " surrounding it.
       },
       fontSize: {
         xs: "0.75rem",
@@ -46,26 +59,35 @@ module.exports = {
         "20xl": "18rem",
       },
       colors: {
-        black: "#16171b",
-
-        transparent: "transparent",
-        current: "currentColor",
-        gray: colors.gray,
-        blueGray: colors.blueGray,
-        brand: {
-          DEFAULT: "#2B54F8",
-          1: "#F0F3FF",
-          2: "#BFCCFD",
-          3: "#8DA4FC",
-          4: "#5C7CFA",
-          5: "#6ea3ff",
-          6: "#2B54F8",
-          7: "#191b23",
-          8: "#d1d5de",
-          9: "#747a88",
-          10: "#454c66",
-          11: "#262636",
-        },
+        // whites
+        ghost: "#f9fafe",
+        lilac: "#f7f8fa",
+        gallery: "#f0f0f0",
+        smoke: "#f0f0f0",
+        mercury: "#e4e5e5",
+        // dark
+        metal: "#c5c7d3",
+        santa: "#a0a1b2",
+        manatee: "#9596a9",
+        waterloo: "#7f8198",
+        storm: "#676d89",
+        comet: "#5c617a",
+        bay: "#51566c",
+        river: "#464a5d",
+        tuna: "#313340",
+        cinder: "#252731",
+        pearl: "#1e2028",
+        //system
+        gitter: "#e4eeff",
+        icy: "#d5ddfe",
+        periwinkly: "#bfccfd",
+        pastel: "#aabbfc",
+        widowmaker: "#95aafc",
+        periblue: "#8098fb",
+        punch: "#6b87fa",
+        oyster: "#5576f9",
+        mana: "#4065f9",
+        ultramarine: "#445cff",
       },
       fontFamily: {
         mono: ['"IBM Plex Mono"', "ui-monospace"], // Ensure fonts with spaces have " " surrounding it.
