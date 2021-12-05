@@ -195,7 +195,7 @@ gulp.task("mangleCSS", function () {
     script: undefined,
     image: undefined,
   };
- const filter = /^\.(flex|hidden|dark)$/;
+ 	const filter = /^\.(flex|hidden|dark|transition|transform|esase-in|ease-out|duration-100|duration-150|opacity-0|opacity-100|scale-95|scale-100|translate-y-0|-translate-y-full|shadow-md|)$/;
   const plugins = [posthtmlInlineAssets({ transforms }), minifyClassnames()];
 
   return gulp
