@@ -1,23 +1,24 @@
-<div class="min-h-[640px] bg-white">
+<div class="min-h-[640px] bg-white dark:bg-tuna">
   <div x-data="{ open: false }" @keydown.window.escape="open = false">
-    {{>"global/mobileNavigation"}}
     <!-- Static sidebar for desktop -->
-    {{>"index/desktopNavigation"}}
+    {{>"global/desktopNavigation"}}
+
     <div class="relative z-0 flex flex-1 overflow-hidden">
       <div
         class="relative z-0 flex-1 overflow-y-auto focus:outline-none lg:pl-72"
       >
+        {{>"global/navbar"}} {{>"global/mobileNavigation"}}
         <!-- Start main area-->
         <div class="flex-1 mx-auto">
           <section
             class="
               mx-auto
               bg-white
-              border-b-4
+              border-b
               dark:bg-tuna
-              border-oyster
+              border-periblue
               max-w-7xl
-              dark:border-ultramarine
+              dark:border-gun
             "
           >
             <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-32 pt-44">
@@ -31,11 +32,11 @@
                   leading-none
                   tracking-tighter
                   text-comet
-                  dark:text-smoke
+                  dark:text-manatee
                   lg:text-5xl
                 "
               >
-                Adding a logo.
+                Developing: <span class="text-periblue">Resources</span>
               </h1>
             </div>
           </section>
@@ -51,7 +52,7 @@
                           text-base
                           font-light
                           text-waterloo
-                          dark:text-metal
+                          dark:text-santa
                           sm:text-lg
                           md:mt-5 md:text-xl
                         "
@@ -66,6 +67,7 @@
                       <div>
                         <ul
                           role="list"
+                          a
                           class="
                             space-y-3
                             text-base
@@ -79,7 +81,7 @@
                               class="
                                 font-light
                                 text-waterloo
-                                dark:text-metal
+                                dark:text-santa
                                 hover:text-oyster
                                 dark:hover:text-oyster
                               "
@@ -93,7 +95,7 @@
                               class="
                                 font-light
                                 text-waterloo
-                                dark:text-metal
+                                dark:text-santa
                                 hover:text-oyster
                                 dark:hover:text-oyster
                               "
@@ -107,7 +109,7 @@
                               class="
                                 font-light
                                 text-waterloo
-                                dark:text-metal
+                                dark:text-santa
                                 hover:text-oyster
                                 dark:hover:text-oyster
                               "
@@ -121,7 +123,7 @@
                               class="
                                 font-light
                                 text-waterloo
-                                dark:text-metal
+                                dark:text-santa
                                 hover:text-oyster
                                 dark:hover:text-oyster
                               "
@@ -140,7 +142,7 @@
                           text-lg
                           font-normal
                           text-comet
-                          dark:text-smoke
+                          dark:text-manatee
                           hover:text-oyster
                           lg:text-2xl
                           group
@@ -153,7 +155,7 @@
                             items-center
                             gap-4
                             text-comet
-                            dark:text-smoke dark:hover:text-periblue
+                            dark:text-manatee dark:hover:text-periblue
                           "
                         >
                           Overview
@@ -176,7 +178,7 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
@@ -193,7 +195,7 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
@@ -213,7 +215,7 @@
                           text-lg
                           font-normal
                           text-comet
-                          dark:text-smoke
+                          dark:text-manatee
                           hover:text-oyster
                           lg:text-xl
                           group
@@ -226,7 +228,7 @@
                             items-center
                             gap-4
                             text-comet
-                            dark:text-smoke dark:hover:text-periblue
+                            dark:text-manatee dark:hover:text-periblue
                           "
                         >
                           Dockerz is open source
@@ -249,7 +251,7 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
@@ -268,7 +270,7 @@
                           text-lg
                           font-normal
                           text-comet
-                          dark:text-smoke
+                          dark:text-manatee
                           hover:text-oyster
                           lg:text-2xl
                           group
@@ -281,7 +283,7 @@
                             items-center
                             gap-4
                             text-comet
-                            dark:text-smoke dark:hover:text-periblue
+                            dark:text-manatee dark:hover:text-periblue
                           "
                         >
                           How Dockerz works
@@ -304,7 +306,7 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
@@ -320,7 +322,7 @@
                           text-lg
                           font-normal
                           text-comet
-                          dark:text-smoke
+                          dark:text-manatee
                           hover:text-oyster
                           lg:text-xl
                           group
@@ -333,7 +335,7 @@
                             items-center
                             gap-4
                             text-comet
-                            dark:text-smoke dark:hover:text-periblue
+                            dark:text-manatee dark:hover:text-periblue
                           "
                         >
                           Our guiding principles
@@ -356,11 +358,11 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
-                          <strong class="text-comet dark:text-smoke"
+                          <strong class="text-comet dark:text-manatee"
                             >Quis semper vulputate</strong
                           >
                           aliquam venenatis egestas sagittis quisque orci. Donec
@@ -372,11 +374,11 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
-                          <strong class="text-comet dark:text-smoke"
+                          <strong class="text-comet dark:text-manatee"
                             >Quis semper</strong
                           >
                           aliquam venenatis egestas sagittis quisque orci. Donec
@@ -387,7 +389,7 @@
                               underline
                               text-oyster
                               hover:text-comet
-                              dark:text-smoke
+                              dark:text-manatee
                             "
                             >aliquam porttitor ultrices gravida</a
                           >
@@ -400,11 +402,11 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
-                          <strong class="text-comet dark:text-smoke"
+                          <strong class="text-comet dark:text-manatee"
                             >Quis semper vulputate aliquam venenatis</strong
                           >
                           egestas sagittis quisque orci.
@@ -418,7 +420,7 @@
                           text-lg
                           font-normal
                           text-comet
-                          dark:text-smoke
+                          dark:text-manatee
                           hover:text-oyster
                           lg:text-2xl
                           group
@@ -445,7 +447,7 @@
                             text-base
                             font-light
                             text-waterloo
-                            dark:text-metal
+                            dark:text-santa
                             sm:text-lg
                           "
                         >
@@ -461,7 +463,7 @@
                               text-base
                               list-none
                               text-comet
-                              dark:text-smoke
+                              dark:text-manatee
                               sm:text-lg
                               md:mt-8 md:text-base
                             "
@@ -537,7 +539,7 @@
                           font-normal
                           underline
                           text-comet
-                          dark:text-smoke
+                          dark:text-manatee
                           hover:text-oyster
                         "
                       >
@@ -549,15 +551,13 @@
               </section>
             </div>
           </section>
-          {{>"logo/pagination"}}
+          {{>"global/pagination"}}
         </div>
         <!-- End div area -->
       </div>
-      <!--
-         You can insert a third column here, is already built and it will be fixed and hidden on phone.-->
-      <!--
-        End secondary column
-       -->
+      <!-- You can insert a third column here, for a table of contents if you wish, is already built and it will be fixed and hidden on phone.-->
+
+      <!-- End secondary column -->
     </div>
   </div>
 </div>

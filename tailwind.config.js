@@ -6,13 +6,14 @@ const plugin = require("tailwindcss/plugin");
 // Here we importa all tailwind colors
 const colors = require("tailwindcss/colors");
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   purge: ["./src/**/*.html"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       boxShadow: {
-gitter:"rgba(136, 172, 243, 0.25) 0px 10px 30px, rgba(0, 0, 0, 0.03) 0px 1px 1px, rgba(0, 51, 167, 0.1) 0px 10px 20px;",
+        gitter:
+          "rgba(136, 172, 243, 0.25) 0px 10px 30px, rgba(0, 0, 0, 0.03) 0px 1px 1px, rgba(0, 51, 167, 0.1) 0px 10px 20px;",
       },
       fontFamily: {
         mono: ['"IBM Plex Mono"', "ui-monospace"], // Ensure fonts with spaces have " " surrounding it.
@@ -60,6 +61,8 @@ gitter:"rgba(136, 172, 243, 0.25) 0px 10px 30px, rgba(0, 0, 0, 0.03) 0px 1px 1px
       },
       colors: {
         // whites
+        haze: "#f6f8fa",
+        alabaster: "#f9fafb",
         ghost: "#f9fafe",
         lilac: "#f7f8fa",
         gallery: "#f0f0f0",
@@ -74,8 +77,10 @@ gitter:"rgba(136, 172, 243, 0.25) 0px 10px 30px, rgba(0, 0, 0, 0.03) 0px 1px 1px
         comet: "#5c617a",
         bay: "#51566c",
         river: "#464a5d",
-        tuna: "#313340",
-        cinder: "#252731",
+        //github scheme
+        gun: "#2d333b",
+        tuna: "#22272e",
+        cinder: "#1c2128",
         pearl: "#1e2028",
         //system
         gitter: "#e4eeff",
@@ -88,6 +93,50 @@ gitter:"rgba(136, 172, 243, 0.25) 0px 10px 30px, rgba(0, 0, 0, 0.03) 0px 1px 1px
         oyster: "#5576f9",
         mana: "#4065f9",
         ultramarine: "#445cff",
+
+        //highlight
+        flamingo: "#ff99ac",
+        mona: "#ff9a8b",
+        brink: "#fe6b88",
+        magenta: "#ef6bad",
+        fuchsia: "#eb4899",
+        rose: "#cf1872",
+
+        //system
+        fadedred: "#fb5a8c",
+        carnation: "#f84d6b",
+        coral: "#ee2a1b",
+        herbs: "#00e0cc",
+        shamrock: "#00d0d4",
+        jade: "#06b0e4",
+        baby: "#9cbff9",
+        nation: "#5b8def",
+        grandis: "#fccc74",
+        pumpikin: "#fdad41",
+        carrot: "#ff8800",
+        cryon: "#ff8975",
+        energy: "#ff8379",
+        tangerine: "#ff6b8b",
+        glass: "#a8eff2",
+        fluor: "#72e0e7",
+        ice: "#00cfde",
+        plum: "#dda5e8",
+        lilac: "#ab5dd9",
+        heart: "#6600cc",
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            code: {
+              color: "#7c74da",
+            },
+            pre: {
+              backgroundColor: "#1c2128",
+              borderWidth: "1px",
+              borderColor: "#2d333b",
+            },
+          },
+        },
       },
       fontFamily: {
         mono: ['"IBM Plex Mono"', "ui-monospace"], // Ensure fonts with spaces have " " surrounding it.
