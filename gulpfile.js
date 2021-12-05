@@ -170,12 +170,12 @@ gulp.task("views", function () {
 // -------------------------------------
 //   Task: mangle css classes
 // -------------------------------------
-//gulp.task("mangleCSS", function () {
-//  const transforms = {
-//    style: {
-//      resolve(node) {
-//        node.tag === "link" && console.log(node.attrs.href);
-        /* node.tag === "link" && console.log(node.attrs.rel);
+gulp.task("mangleCSS", function () {
+const transforms = {
+   style: {
+      resolve(node) {
+       node.tag === "link" && console.log(node.attrs.href);
+        node.tag === "link" && console.log(node.attrs.rel);
         return (
           node.tag === "link" &&
           node.attrs &&
@@ -202,7 +202,7 @@ gulp.task("views", function () {
     .src(["dist/*.html"])
     .pipe(posthtml(plugins))
     .pipe(gulp.dest(paths.dist));
-}); */
+});
 
 // -------------------------------------
 //   Tast: server
@@ -261,4 +261,4 @@ gulp.task("build-prod", gulp.series("build", "mangleCSS"));
 gulp.task("default", gulp.series("build", "server"));
 //   Task: build
 // -------------------------------------
-gulp.task('build', gulp.series('clean', gulp.parallel('postcss', 'fonts', 'images', 'views'), 'mangleCSS'));
+gulp.task('build', gulp.series('clean', gulp.parallel('postcss', 'fonts', 'images', 'views')));
