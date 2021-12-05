@@ -37,7 +37,7 @@ or components like navigation or footer.
 In the root of `src` we will store full pages importing our layouts, and partials. In our example there is just
 on file named `index.html` but you can create others and add links to them in your navigation.
 
-If you have any doubt about how to use this code, you can reach use in twitter like [@Mike_Andreuzza](https://twitter.com/Mike_Andreuzza)
+If you have any doubt about how to use this code, you can reach us in twitter like [@Mike_Andreuzza](https://twitter.com/Mike_Andreuzza)
 and [@g_perales](https://twitter.com/g_perales).
 
 ## Deploying to production
