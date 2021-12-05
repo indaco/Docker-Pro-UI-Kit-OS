@@ -170,12 +170,12 @@ gulp.task("views", function () {
 // -------------------------------------
 //   Task: mangle css classes
 // -------------------------------------
-gulp.task("mangleCSS", function () {
-  const transforms = {
-    style: {
-      resolve(node) {
-        node.tag === "link" && console.log(node.attrs.href);
-        node.tag === "link" && console.log(node.attrs.rel);
+//gulp.task("mangleCSS", function () {
+//  const transforms = {
+//    style: {
+//      resolve(node) {
+//        node.tag === "link" && console.log(node.attrs.href);
+        /* node.tag === "link" && console.log(node.attrs.rel);
         return (
           node.tag === "link" &&
           node.attrs &&
@@ -202,7 +202,7 @@ gulp.task("mangleCSS", function () {
     .src(["dist/*.html"])
     .pipe(posthtml(plugins))
     .pipe(gulp.dest(paths.dist));
-});
+}); */
 
 // -------------------------------------
 //   Tast: server
