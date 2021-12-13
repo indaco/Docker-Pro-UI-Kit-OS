@@ -3,11 +3,8 @@
 // "firefox:" to the class
 // the snippet is att the bottom within the plugins.
 const plugin = require("tailwindcss/plugin");
-// Here we importa all tailwind colors
-const colors = require("tailwindcss/colors");
 module.exports = {
-  mode: "jit",
-  purge: ["./src/**/*.html"],
+  content: ["./src/**/*.html"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
@@ -138,28 +135,7 @@ module.exports = {
           },
         },
       },
-      fontFamily: {
-        mono: ['"IBM Plex Mono"', "ui-monospace"], // Ensure fonts with spaces have " " surrounding it.
-        sans: [
-          '"IBM Plex Sans"',
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          '"Noto Sans"',
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-        ], // Ensure fonts with spaces have " " surrounding it.
-      },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [
     require("@tailwindcss/forms"),
